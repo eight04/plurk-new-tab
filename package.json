@@ -1,0 +1,26 @@
+{
+  "name": "plurk-new-tab",
+  "version": "0.0.0",
+  "description": "Open Plurk in new tabs in user page",
+  "keywords": [
+    "userscript",
+    "plurk"
+  ],
+  "homepage": "https://github.com/eight04/plurk-new-tab",
+  "bugs": "https://github.com/eight04/plurk-new-tab/issues",
+  "license": "MIT",
+  "author": "eight04 <eight04@gmail.com>",
+  "main": "plurk-new-tab.user.js",
+  "repository": "eight04/plurk-new-tab",
+  "scripts": {
+    "test": "eslint .",
+    "preversion": "npm test",
+    "version": "sync-version plurk-new-tab.user.js && git add .",
+    "postversion": "git push --follow-tags"
+  },
+  "private": true,
+  "devDependencies": {
+    "eslint": "^9.38.0",
+    "sync-version": "^1.1.0"
+  }
+}
