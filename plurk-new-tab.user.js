@@ -17,7 +17,7 @@
 
 const userId = location.pathname.split("/")[2];
 if (userId) {
-  unsafeWindow.addEventListener("click", e => {
+  addEventListener("click", e => {
     let url;
     let el;
 
