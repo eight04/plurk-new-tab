@@ -5,7 +5,7 @@
 // @match       https://www.plurk.com/m/*
 // @exclude-match https://www.plurk.com/m/p/*
 // @exclude-match https://www.plurk.com/m/search*
-// @version     0.0.0
+// @version     0.1.0
 // @author		eight <eight04@gmail.com> (https://github.com/eight04)
 // @homepage	https://github.com/eight04/plurk-new-tab
 // @supportURL	https://github.com/eight04/plurk-new-tab/issues
