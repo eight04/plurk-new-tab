@@ -13,6 +13,11 @@ Install
 Changelog
 ---------
 
+* 0.1.1 (Feb 1, 2026)
+
+  - Fix: only run on user pages.
+  - Fix: use native link for opener tab support.
+
 * 0.1.0 (Feb 1, 2026)
 
 	- First release.
