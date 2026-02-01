@@ -12,28 +12,37 @@
 // @license		MIT
 // @compatible firefox Tampermonkey, Violentmonkey, Greasemonkey 4.11+
 // @compatible chrome Tampermonkey, Violentmonkey
-// @grant       GM_openInTab
+// @grant       none
 // ==/UserScript==
 
-unsafeWindow.addEventListener("click", e => {
-  let url;
-  let el;
+const userId = location.pathname.split("/")[2];
+if (userId) {
+  unsafeWindow.addEventListener("click", e => {
+    let url;
+    let el;
 
-  if ((el = e.target.closest("a.pictureservices"))) {
-    // img link
-    url = el.href;
-  } else if ((el = e.target.closest("[class*=button], a"))) {
-    // btn, other links
-    return;
-  } else if ((el = e.target.closest(".plurk"))) {
-    // plurk
-    const {plurkId} = el.__vue__.$options.propsData;
-    url = new URL(`p/${plurkId.toString(36)}`, location.href).href
-  }
+    if ((el = e.target.closest("a.pictureservices"))) {
+      // img link
+      url = el.href;
+    } else if ((el = e.target.closest("[class*=button], a"))) {
+      // btn, other links
+      return;
+    } else if ((el = e.target.closest(".plurk"))) {
+      // plurk
+      const {plurkId} = el.__vue__.$options.propsData;
+      url = new URL(`p/${plurkId.toString(36)}`, location.href).href
+    }
 
-  if (url) {
-    e.preventDefault();
-    e.stopPropagation();
-    GM_openInTab(url, {active: true});
-  }
-}, true);
+    if (url) {
+      e.preventDefault();
+      e.stopPropagation();
+      const a = document.createElement("a");
+      a.href = url;
+      a.target = "_blank";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  }, true);
+}
+
