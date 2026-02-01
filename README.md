@@ -8,7 +8,7 @@ Plurk in new tab
 Install
 -------
 
-TODO
+<https://greasyfork.org/zh-TW/scripts/564779-plurk-in-new-tab>
 
 Changelog
 ---------
