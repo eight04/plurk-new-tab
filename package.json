@@ -1,6 +1,6 @@
 {
   "name": "plurk-new-tab",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Open Plurk in new tabs in user page",
   "keywords": [
     "userscript",
