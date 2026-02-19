@@ -13,6 +13,11 @@ Install
 Changelog
 ---------
 
+* 0.1.3 (Feb 19, 2026)
+
+  - Fix: doesn't work on ajax loaded content.
+  - Fix: use grant none.
+
 * 0.1.1 (Feb 1, 2026)
 
   - Fix: only run on user pages.
