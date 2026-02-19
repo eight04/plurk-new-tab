@@ -3,7 +3,7 @@
 // @description	將 Plurk 連結開啟於新分頁
 // @namespace   https://github.com/eight04
 // @match       https://www.plurk.com/m/*
-// @version     0.1.2
+// @version     0.1.3
 // @author		eight <eight04@gmail.com> (https://github.com/eight04)
 // @homepage	https://github.com/eight04/plurk-new-tab
 // @supportURL	https://github.com/eight04/plurk-new-tab/issues
